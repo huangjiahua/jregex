@@ -17,20 +17,9 @@ private:
 public:
     dfs(digraph &g, size_t src);
 
-    dfs(digraph &g, std::forward_list<size_t> &c) : is_marked(g.vertex(), false) {
-        for (size_t s : c)
-            if (!is_marked[s])
-                search(g, s);
-    }
+    dfs(digraph &g, std::forward_list<size_t> &c);
 
-    void reset(digraph &g, std::forward_list<size_t> &c) {
-        is_marked.resize(g.vertex());
-        for (int i = 0; i < is_marked.size(); ++i)
-            is_marked[i] = false;
-        for (size_t s : c)
-            if (!is_marked[s])
-                search(g, s);
-    }
+    void reset(digraph &g, std::forward_list<size_t> &c);
 
 
     bool marked(const size_t v) const;

@@ -31,5 +31,20 @@ void dfs::search(digraph &g, const size_t v) {
                 search(g, w.index);
         }
 }
+
+dfs::dfs(digraph &g, std::forward_list<size_t> &c) : is_marked(g.vertex(), false) {
+    for (size_t s : c)
+        if (!is_marked[s])
+            search(g, s);
+}
+
+void dfs::reset(digraph &g, std::forward_list<size_t> &c) {
+    is_marked.resize(g.vertex());
+    for (int i = 0; i < is_marked.size(); ++i)
+        is_marked[i] = false;
+    for (size_t s : c)
+        if (!is_marked[s])
+            search(g, s);
+}
 } // namespace jregex_util
 

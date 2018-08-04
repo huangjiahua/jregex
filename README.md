@@ -1,8 +1,9 @@
 # jregex
+
 **A C++ Regular Expression Library**
 
 Authur: Huang Jiahua
-***
+
 
 ## Features
 
@@ -23,6 +24,7 @@ Quick start:
 
 ``` bash
 mkdir build
+cd build
 cmake..
 ```
 

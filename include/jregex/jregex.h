@@ -5,7 +5,7 @@
 #ifndef JREGEX_JREGEX_H
 #define JREGEX_JREGEX_H
 
-#include "../../lib/nfa/NFA.h"
+#include "../internal/NFA.h"
 #include <string>
 
 namespace jregex {

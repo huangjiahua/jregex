@@ -3,7 +3,7 @@
 //
 
 #include <cstddef>
-#include "digraph.h"
+#include "../../include/internal/digraph.h"
 
 namespace jregex_util {
 size_t digraph::vertex() const {

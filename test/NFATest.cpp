@@ -2,7 +2,7 @@
 // Created by 黄嘉华 on 2018/7/30.
 //
 
-#include "../lib/nfa/NFA.h"
+#include "../include/internal/NFA.h"
 #include <gtest/gtest.h>
 #include <algorithm>
 using namespace std;

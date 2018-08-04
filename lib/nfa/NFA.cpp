@@ -1,7 +1,7 @@
 //
 // Created by 黄嘉华 on 2018/7/31.
 //
-#include "NFA.h"
+#include "../../include/internal/NFA.h"
 
 
 namespace jregex_util {
@@ -346,7 +346,7 @@ NFA::search(const std::string &txt, const std::string::size_type start) {
         pc.clear();
         ranges.clear();
         complement = false;
-        
+
         if (match.empty()) {
             break;
         }
@@ -360,7 +360,7 @@ NFA::search(const std::string &txt, const std::string::size_type start) {
                 ranges.push_front(find_range(square_ranges, v));
             }
         }
-        
+
         if (search.marked(states)) {
             ret.first = true;
             ret.second = i - start + 1;

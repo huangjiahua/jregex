@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD 11)
 add_subdirectory(./test)
 
 set(NFALIBSRC lib/nfa/NFA.cpp lib/digraph/digraph.cpp lib/digraph/dfs.cpp)
+set(INTERNALHEADER include/internal/digraph.h include/internal/dfs.h
+        include/internal/NFA.h)
 
 add_library(jregex SHARED lib/jregex.cpp ${NFALIBSRC})
 set_target_properties(jregex PROPERTIES VERSION 1.0 SOVERSION 0)
@@ -22,5 +24,6 @@ install(TARGETS jregex jregex_static
         ARCHIVE DESTINATION lib)
 
 install(FILES include/jregex/jregex.h DESTINATION include/jregex)
+install(FILES ${INTERNALHEADER} DESTINATION include/internal)
 
 

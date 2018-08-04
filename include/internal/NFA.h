@@ -10,8 +10,8 @@
 #include <sstream>
 #include <stack>
 #include <algorithm>
-#include "../digraph/digraph.h"
-#include "../digraph/dfs.h"
+#include "digraph.h"
+#include "dfs.h"
 #include <limits>
 
 

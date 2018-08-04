@@ -2,7 +2,7 @@
 // Created by 黄嘉华 on 2018/7/29.
 //
 
-#include "dfs.h"
+#include "../../include/internal/dfs.h"
 
 namespace jregex_util {
 dfs::dfs(digraph &g, size_t src) : is_marked(g.vertex(), false) {

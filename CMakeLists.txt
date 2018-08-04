@@ -3,7 +3,7 @@ project(jregex CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory(./googletest)
+#add_subdirectory(./googletest)
 add_subdirectory(./test)
 
 set(NFALIBSRC lib/nfa/NFA.cpp lib/digraph/digraph.cpp lib/digraph/dfs.cpp)

@@ -2,7 +2,7 @@
 
 **A C++ Regular Expression Library**
 
-Authur: Huang Jiahua
+Author: Huang Jiahua
 
 
 ## Features

@@ -1,12 +1,12 @@
 # jregex
 
----
+
 
 *Huang Jiahua*
 
 The jregex library provides four ways to handle problems with regular expression including matching and searching. And the users are provided with four function. 
 
-## Maching
+## Matching
 
 The first function provided is to return wheter a string matches the given regular expression.
 
@@ -80,6 +80,7 @@ for (jregex::result re : arr)
 | or | separated by \| | (ab\|c)d |
 | closure | * | (ab)*c\* |
 | at least 1 | + | (ab)+c+ |
+| 0 or 1| ? | (ab)?c? |
 | specific times | count in { } | m{2}d |
 | range of times | range in { } | m{1,2}d{3,} |
 | wildcard | . | .+\\.cpp |

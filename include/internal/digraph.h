@@ -38,8 +38,9 @@ public:
     size_t vertex() const;
     size_t edge() const;
 
-    void inc_weight(const size_t from, const size_t to);
-    void dec_weight(const size_t from, const size_t to);
+    // add
+    void add_edge(const size_t from, const size_t to);
+    void add_edge(const size_t from, const size_t to, const long long w);
 
     void reset_weight();
 

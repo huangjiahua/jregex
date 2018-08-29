@@ -17,22 +17,20 @@ size_t digraph::edge() const {
 digraph::digraph(size_t v): V(v), E(0), adj(v, Bag()) {
 }
 
+void digraph::add_edge(const size_t from, const size_t to) {
+    adj[from].push_front(node(to));
+    E++;
+}
 
 digraph::Bag &digraph::adjacent(size_t v) {
     return adj[v];
 }
 
-void digraph::inc_weight(const size_t from, const size_t to) {
-    for (auto& e : adj[from])
-        if (e.index == to)
-            e.weight++;
+void digraph::add_edge(const size_t from, const size_t to, const long long w) {
+    adj[from].push_front(node(to, w));
+    E++;
 }
 
-void digraph::dec_weight(const size_t from, const size_t to) {
-    for (auto& e : adj[from])
-        if (e.index == to)
-            e.weight--;
-}
 
 void digraph::reset_weight() {
     for (auto& b : adj)
